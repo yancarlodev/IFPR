@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <math.h>
  
-int main(void)
-{
-	double raio, pi=3.14159, area;
-	printf("Insira o raio: "); 
+int main (){
+	double raio, pi=3.14159, area; 
 	scanf("%lf", &raio);
 	area = pi * pow(raio, 2);
-
-	return printf("A=%.4f\n", area);
+	printf("A=%.4f\n", area);
+	return 0;
 }

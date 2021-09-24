@@ -3,7 +3,6 @@
 int main (){
     int segundosiniciais, restosegundos;
     double horas, minutos, segundos;
-    printf("Insira a quantidade de segundos: ");
     scanf("%i", &segundosiniciais);
     restosegundos = segundosiniciais;
     horas = segundosiniciais / 3600;
@@ -11,6 +10,6 @@ int main (){
     minutos = restosegundos / 60;
     restosegundos %= 60;
     segundos = restosegundos;
-
-    return printf("%.0lf:%.0lf:%.0lf", horas, minutos, segundos);
+    printf("%.0lf:%.0lf:%.0lf\n", horas, minutos, segundos);
+    return 0;
 }

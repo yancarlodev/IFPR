@@ -2,8 +2,8 @@
 
 int main (){
     int a, b, soma;
-    printf("Insira dois numeros para somar: ");
     scanf("%i %i", &a, &b);
     soma = a + b;
-    return printf("SOMA = %i\n", soma);
+    printf("SOMA = %i\n", soma);
+    return 0;
 }
