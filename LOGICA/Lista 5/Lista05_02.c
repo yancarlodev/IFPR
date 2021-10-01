@@ -29,7 +29,7 @@ int main (){
             printf("Belo Horizonte\n");
             break;
         default:
-            printf("DDD não registrado\n");                        
+            printf("DDD nao cadastrado\n");                        
     }
     return 0;
 }
