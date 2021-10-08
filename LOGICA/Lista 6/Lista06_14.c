@@ -1,11 +1,13 @@
 #include <stdio.h>
 
 int main (){
-    int number, i, resultado, final = 0;
+    int number, i;
     scanf("%i", &number);
-    for(i = 1; i != number; i++){
-        resultado = number * (number-i);
-        final += resultado;
+    i = number - 1;
+    while(i > 0){
+        number *= i;
+        i--;
     }
-    printf("%i", final);
+    printf("%i\n", number);
+    return 0;
 }

@@ -12,5 +12,6 @@ int main (){
         }
     }
     resultado /= divisor;
-    printf("%.2f", resultado);
+    printf("%.2f\n", resultado);
+    return 0;
 }
