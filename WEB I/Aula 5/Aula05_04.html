@@ -1,0 +1,99 @@
+<html lang="en">
+    <head>
+        <style>
+            body{
+                background-color: black;
+            }
+            .container{
+                display: grid;
+                grid-template-columns: 100%;
+            }
+            .header{
+                text-align: center;
+                background-color: rgb(224, 187, 139);
+                padding: 20px;
+            }
+            h1{
+                margin-bottom: 2px;
+                margin-top: 2px;
+                color: darkblue;
+            }
+            a{
+                color: yellow;
+                padding: 0px 5px;
+            }
+            .borderlink{
+                border-right: 1px solid black;
+            }
+            .flex{
+                display: flex;
+                justify-content: center;
+            }
+            .content{
+                display: grid;
+                grid-template-columns: 12% 88%;
+            }
+            hr{
+                margin: 0px;
+                border: 1px solid darkblue;
+            }
+            .main{
+                padding: 10px 30px 10px 10px;
+                background-color: white;
+            }
+            .sidebar{
+                background-color: white;
+            }
+            .footer{
+                background-color: lightgray;
+                text-align: center;
+            }
+            .baritem{
+                color: blue;
+                text-decoration: none;
+                background-color: white;
+                border-radius: 3px;
+                padding: 5px 30px 5px 5px;
+                margin: 10 0px;
+            }
+            .bar{
+                background-color: rgb(224, 187, 139);
+                padding: 10px;
+            }
+            .baritem:hover{
+                background-color: lightgreen;
+            }
+        </style>  
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Desenvolvimento de sistemas</h1>
+                <div class="flex">
+                <a href="#" class="borderlink">google</a>
+                <a href="#" class="borderlink">ifpr</a>
+                <a href="#">uol</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="bar">
+                        <p class="baritem">produtos</p>
+                        <p class="baritem">clientes</p>
+                        <p class="baritem">help-desk</p>
+                        <p class="baritem">informações</p>
+                    </div>
+                </div>
+                <div class="main">
+                    <h1>Introdução</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nihil voluptatem atque, dignissimos obcaecati fugiat pariatur dolorum adipisci a eius eveniet culpa quisquam sed omnis consequuntur magnam officiis blanditiis eaque!</p>
+                    <h1>Desenvolvimento</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero alias ratione eaque doloribus facere architecto consectetur dolor magnam qui maxime quasi voluptate nam unde voluptatem suscipit reiciendis, nulla tempora a.</p>
+                </div>
+            </div>
+            <div class="footer"><p>Site desenvolvido por tectronica S.A.</p></div>
+        </div>
+    </body>
+</html>

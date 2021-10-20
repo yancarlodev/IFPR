@@ -1,0 +1,85 @@
+<html lang="en">
+    <head>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .header{
+                text-align: center;
+                background-image: url(https://cdn.thedesigninspiration.com/wp-content/uploads/2011/03/Patten476-l.jpg);
+                margin: 0px;
+            }
+            .container{
+                display: grid;
+                grid-template-columns: 100%;
+            }
+            .content{
+                display: grid;
+                grid-template-columns: 10% 90%;
+            }
+            ul{
+                list-style: none;
+                padding-left: 20px;
+            }
+            .sidebar{
+                border-left: 1px solid lightgrey;
+            }
+            .main{
+                border: 1px solid green;
+            }
+            .maintext{
+                padding-left: 20px;
+            }
+            .card{
+                display: grid;
+                grid-template-columns: 33% 34% 33%;
+            }
+            .carditems{
+                border: 1px solid lightgray;
+                padding: 10px;
+            }
+            .jungle{
+                width: 70%;
+                height: 70%;
+            }
+            .footer{
+                text-align: center;
+                border: 1px solid salmon;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header"><h1>HEADER_2</h1></div>
+            <div class="content">
+                <div class="sidebar">
+                    <ul>
+                        <li>opção A</li>
+                        <li>opção B</li>
+                        <li>opção C</li>
+                        <li>opção D</li>
+                    </ul>
+                </div>
+                <div class="main">
+                    <p class="maintext">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis magnam tempore quibusdam natus, unde aperiam id ipsam ullam vitae accusamus consequuntur non excepturi repellendus, alias earum facilis doloribus quaerat distinctio.</p>
+                    <p class="maintext">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis magnam tempore quibusdam natus, unde aperiam id ipsam ullam vitae accusamus consequuntur non excepturi repellendus, alias earum facilis doloribus quaerat distinctio.</p>
+                    <div class="card">
+                        <div class="carditems">
+                            <h3>jungle</h3>
+                            <img class="jungle" src="https://media.istockphoto.com/photos/the-anvil-morning-mist-picture-id535499464?b=1&k=20&m=535499464&s=170667a&w=0&h=JOKbtcOwVAYSVp3tB_MYIupW4HXVinQFdz0vY2CLMBU=" alt="jungle">
+                        </div>
+                        <div class="carditems">
+                            <h3>one title</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex esse molestias ab aspernatur quod nesciunt aut dolor, quibusdam optio ut, iure quasi laborum excepturi inventore rerum ratione fugiat porro vitae!</p>
+                        </div>
+                        <div class="carditems">
+                            <h3>second title</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero doloremque molestias corrupti praesentium explicabo laborum nisi mollitia, quibusdam suscipit aspernatur itaque quaerat omnis sequi consequuntur iure! Illum totam at quo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"><h1>FOOTER</h1></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <style>
+            body{
+                background-color: rgb(68, 68, 68);
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .container{
+                display: grid;
+                grid-template-columns: 100%;
+            }
+            .header{
+                color: white;
+                text-align: center;
+            }
+            .content{
+                background-color: rgb(48, 48, 48);
+                padding: 20px;
+                display: grid;
+                grid-template-columns: 32% 32% 32%;
+                gap: 20px;
+            }
+            .box1{
+                border: 1px solid purple;
+                padding: 10px;
+                background-color: rgb(243, 255, 224);
+            }
+            .box2{
+                border: 1px solid grey;
+                padding: 10px;
+                background-color: rgb(157, 255, 255);
+            }
+            .box3{
+                border: 1px solid grey;
+                padding: 10px;
+                background-color: pink;
+            }
+            .underContent{
+                background-color: rgb(48, 48, 48);
+                padding: 20px;
+                display: grid;
+                grid-template-columns: 32% 32%;
+                gap: 20px;
+                justify-content: center;
+                }
+                .footer{
+                    background-color: rgb(255, 96, 96);
+                    color: white;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header"><h1>HEADER</h1></div>
+            <div class="content">
+                <div class="box1">
+                    <h3>title1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quos recusandae? Rem iusto aperiam repellat repudiandae distinctio voluptatibus necessitatibus atque consequuntur esse omnis numquam odio dolore nam, cupiditate libero eveniet?</p>
+                </div>
+                <div class="box2">
+                    <h3>title2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsam ad voluptate excepturi suscipit nulla dolore doloremque corporis, distinctio, adipisci molestias neque accusantium dolores, magnam sunt corrupti. Assumenda, rerum quis!</p>
+                </div>
+                <div class="box1">
+                    <h3>title1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quae est ducimus cum commodi harum veniam illo maiores! Eligendi unde rerum, inventore reprehenderit possimus esse nam! Reprehenderit iste praesentium laudantium!</p>
+                </div>
+            </div>
+            <div class="underContent">
+                <div class="box3">
+                    <h3>title1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis officia porro blanditiis. Velit id natus totam. Nemo iusto placeat accusamus cupiditate et enim eos autem! Necessitatibus nihil hic aliquid rem.</p>
+                </div>
+                <div class="box2">
+                    <h3>title1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsam ad voluptate excepturi suscipit nulla dolore doloremque corporis, distinctio, adipisci molestias neque accusantium dolores, magnam sunt corrupti. Assumenda, rerum quis!</p>
+                </div>
+            </div>
+            <div class="footer"><h1>FOOTER</h1></div>
+        </div>
+    </body>
+</html>
