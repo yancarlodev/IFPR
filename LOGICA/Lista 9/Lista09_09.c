@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main (){
-    int linha, i, j, k = 0, l = 5, g = 6;
+    int linha, i, j, k = 0, g = 0;
     char op;
     double m[12][12], soma = 0, media = 0;
 
@@ -16,29 +16,39 @@ int main (){
     j = 0;
     if(op == 'S'){
         for(i = 0; i < 12; i++){
-            if(i >= 7){
-                for(j = 0; j < 12; j++){
-                        if(j >= l && j <= g){
+            if(i >= 1 && i <= 10){
+                    for(j = 0; j < 12; j++){
+                        if(j <= g){
                             soma += m[i][j];
                         }
                 }
-                l--;
-                g++;
+                if(i == 5){
+                    g = 4;
+                } else if(i > 5){
+                    g--;
+                } else{
+                    g++;
+                }
             }
         }
         printf("%.1lf\n", soma);
     } else if(op == 'M'){
         for(i = 0; i < 12; i++){
-            if(i >= 7){
-                for(j = 0; j < 12; j++){
-                        if(j >= l && j <= g){
+            if(i >= 1 && i <= 10){
+                    for(j = 0; j < 12; j++){
+                        if(j <= g){
                             soma += m[i][j];
                             k++;
                         }
                 }
-                l--;
-                g++;
-            }       
+                if(i == 5){
+                    g = 4;
+                } else if(i > 5){
+                    g--;
+                } else{
+                    g++;
+                }
+            }
         }
         media = soma / k;
         printf("%.1lf\n", media);
