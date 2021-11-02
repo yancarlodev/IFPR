@@ -1,47 +1,43 @@
 #include <stdio.h>
 
 int main (){
-    int impar[5], par[5], i, valor, j = 0, k = 0, z;
+    int linha, i, j, k = 0, l = 10, g = 1;
+    char op;
+    float m[12][12], soma = 0, media = 0;
 
-    for(i = 0; i < 15; i++){
-        scanf("%i", &valor);
-    
-        if(valor % 2 == 0){
-            par[j] = valor;
-            j++;
-        } else if(valor % 2 == 1 || valor % 2 == -1){
-            impar[k] = valor;
-            k++;
-        }
-        if(j == 5 || k == 5){
-            if(j == 5){
-                for(z = 0; z < 5; z++){
-                    printf("par[%i] = %i\n", z, par[z]);
-                }
-                j = 0;
-                z = 0;
-            } else if(k == 5){
-                for(z = 0; z < 5; z++){
-                    printf("impar[%i] = %i\n", z, impar[z]);
-                }
-                k = 0;
-                z = 0;
-            }
+    scanf("%i", &linha);
+    scanf(" %c", &op);
+    for(i = 0; i < 12; i++){
+        for(j = 0; j < 12; j++){
+            scanf("%f", &m[i][j]);
         }
     }
-    z = 0;
-    if(j < 5 || k < 5){
-        if(k < 5){
-            for(z = 0; z < k; z++){
-                printf("impar[%i] = %i\n", z, impar[z]);
-            }
-        }
-        z = 0;
-        if(j < 5){
-                for(z = 0; z < j; z++){
-                    printf("par[%i] = %i\n", z, par[z]);
+    i = 0;
+    j = 0;
+    if(op == 'S'){
+        for(i = 0; i < 12; i++){
+            for(j = 0; j < 12; j++){
+                if(j <= l && j >= g){
+                    soma += m[i][j];
                 }
-            } 
+            }
+            l--;
+            g++;
+        }
+        printf("%.1f\n", soma);
+    } else if(op == 'M'){
+        for(i = 0; i < 12; i++){
+            for(j = 0; j < 12; j++){
+                if(j <= l && j >= g){
+                    soma += m[i][j];
+                    k++;
+                }
+            }
+            l--;
+            g++;       
+        }
+        media = soma / k;
+        printf("%.1f\n", media);
     }
     return 0;
 }

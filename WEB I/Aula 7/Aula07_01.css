@@ -1,0 +1,18 @@
+.container{
+    color: darkblue;
+    background-color: lightgreen;
+    border: 1px solid green;
+    margin: auto;
+    width: 30%;
+    padding: 20px;
+}
+
+.formcol2{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 10px;
+}
+
+.formcol2 label{
+    justify-self: right;
+}

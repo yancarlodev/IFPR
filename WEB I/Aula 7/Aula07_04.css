@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(184, 238, 184);
+}
+
+h2{
+    display: inline;
+}
+
+.container{
+    width: max-content;
+    margin: auto;
+}
+
+.container img{
+    width: 100px;
+    height: 60px;
+    float: right;
+}
+
+.formgrid{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    padding: 5px;
+    margin-top: 5%;
+}
+
+.borderinput{
+    border: 1px solid black;
+    padding: 5px 20px 5px 5px;
+}
+
+span{
+    display: block;
+}
+
+.submit{
+    margin: 8px 0px 0px 2px;
+}

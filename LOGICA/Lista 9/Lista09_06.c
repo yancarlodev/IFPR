@@ -1,15 +1,41 @@
 #include <stdio.h>
 
 int main (){
-    int i; 
-    double n[100], x;
-    scanf("%lf", &x);
-    n[0] = x;
-    printf("N[%i] = %.4lf\n", 0, x);
+    int linha, i, j, k = 0, l = 12;
+    char op;
+    float m[12][12], soma = 0, media = 0;
 
-    for(i = 1; i < 100; i++){
-        n[i] = n[i-1] / 2;
-        printf("N[%i] = %.4lf\n", i, n[i]);
+    scanf("%i", &linha);
+    scanf(" %c", &op);
+    for(i = 0; i < 12; i++){
+        for(j = 0; j < 12; j++){
+            scanf("%f", &m[i][j]);
+        }
+    }
+    i = 0;
+    j = 0;
+    if(op == 'S'){
+        for(i = 0; i < 12; i++){
+            for(j = 0; j < 12; j++){
+                if(j >= l && i > 0){
+                    soma += m[i][j];
+                }
+            }
+            l--;
+        }
+        printf("%.1f\n", soma);
+    } else if(op == 'M'){
+        for(i = 0; i < 12; i++){
+            for(j = 0; j < 12; j++){
+                if(j >= l && i > 0){
+                    soma += m[i][j];
+                    k++;
+                }
+            }
+            l--;       
+        }
+        media = soma / k;
+        printf("%.1f\n", media);
     }
     return 0;
 }

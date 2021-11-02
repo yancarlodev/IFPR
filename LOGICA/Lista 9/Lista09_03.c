@@ -1,14 +1,39 @@
 #include <stdio.h>
 
 int main (){
-    float a[100];
-    int i;
+    int linha, i, j, k = 0;
+    char op;
+    float m[12][12], soma = 0, media = 0;
 
-    for(i = 0; i < 100; i++){
-        scanf("%f", &a[i]);
-        if(a[i] <= 10){
-            printf("A[%i] = %.1f\n", i, a[i]);
+    scanf("%i", &linha);
+    scanf(" %c", &op);
+    for(i = 0; i < 12; i++){
+        for(j = 0; j < 12; j++){
+            scanf("%f", &m[i][j]);
         }
+    }
+    i = 0;
+    j = 0;
+    if(op == 'S'){
+        for(i = 0; i < 12; i++){
+            for(j = 0; j < 12; j++){
+                if(j > i){
+                    soma += m[i][j];
+                }       
+            }
+        }
+        printf("%.1f\n", soma);
+    } else if(op == 'M'){
+        for(i = 0; i < 12; i++){
+            for(j = 0; j < 12; j++){
+                if(j > i){
+                    soma += m[i][j];
+                    k++;
+                }       
+            }
+        }
+        media = soma / k;
+        printf("%.1f\n", media);
     }
     return 0;
 }
