@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+        <p id="resultado"></p>
+        <script>
+            var price = parseFloat(prompt("Qual é o preço?"))
+            var discount = price/100 * 10
+            price -= discount
+            var div = document.getElementById("resultado")
+            div.innerHTML = "Valor com desconto: R$" + price
+        </script>
+    </body>
+</html>
