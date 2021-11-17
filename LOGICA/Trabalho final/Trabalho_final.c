@@ -17,7 +17,7 @@ int main (){
 
     printf("Quantos funcionários vc deseja cadastrar? ");
     scanf("%d", &TAM);
-    TAM += 3;
+    TAM += 2;
 
     struct Funcionario{
         char nome[50];
@@ -27,7 +27,7 @@ int main (){
 
     while(funcionario < TAM && seletor > 0){
         printf("\n[0] Sair\n[1] Cadastrar novo funcionário\n[2] Calcular salário\n[3] Alterar dados de um funcionário\n[4] Funcionários com salário maior que a média\n[5] Visualizar dados de um funcionário\n");
-        printf("\nFuncionários cadastrados: %d de %d\n", contador, TAM-3);
+        printf("\nFuncionários cadastrados: %d de %d\n", contador, TAM-2);
         printf("\nO que deseja fazer? ");
         scanf(" %d", &seletor);
         fflush(stdin);
@@ -38,7 +38,7 @@ int main (){
             break;
 
         case 1:
-            if(contador < TAM-3){
+            if(contador < TAM-2){
                 fflush(stdin);
                 printf("Nome: ");
                 fgets(colaborador[funcionario].nome, sizeof(colaborador[funcionario].nome), stdin);
@@ -174,6 +174,7 @@ int main (){
                 }
                 for(i = 1; i < funcionario; i++){
                     if(colaborador[i].salario >= media){
+                        printf("\n");
                         fputs(colaborador[i].nome, stdout);
                         printf("Tem um salário de: R$ %.2lf, sendo acima da média.\n", colaborador[i].salario);
                     }
