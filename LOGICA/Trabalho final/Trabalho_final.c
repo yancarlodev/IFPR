@@ -11,7 +11,7 @@ double salarioTotal (double, int, int, double);
 int main (){
     int TAM, seletor, funcionario = 1, subseletor, i, contador = 0, formacao, poliglota, error = 0, auxcontador = 0;
     double salarioInicial, salarioCalculado, media, total;
-    char charseletor, stringseletor[50];
+    char stringseletor[50];
 
     setlocale(LC_ALL, "");
 
@@ -26,8 +26,10 @@ int main (){
     } colaborador[TAM];
 
     while(funcionario < TAM && seletor > 0){
+        printf("\n======================= MENU =======================\n");
         printf("\n[0] Sair\n[1] Cadastrar novo funcionário\n[2] Calcular salário\n[3] Alterar dados de um funcionário\n[4] Funcionários com salário maior que a média\n[5] Visualizar dados de um funcionário\n");
         printf("\nFuncionários cadastrados: %d de %d\n", contador, TAM-2);
+        printf("\n====================================================\n");
         printf("\nO que deseja fazer? ");
         scanf(" %d", &seletor);
         fflush(stdin);
@@ -62,11 +64,13 @@ int main (){
             if(contador > 0){
                 subseletor = 1;
                 while(subseletor > 0){
+                    printf("\n=================== FUNCIONÁRIOS ===================\n");
                     printf("\n[0] Cancelar\n");
                     for(i = 1; i < funcionario; i++){
                         printf("[%d] ", i);
                         fputs(colaborador[i].nome, stdout);
                     }
+                    printf("\n====================================================\n");
                     printf("\nDe quem deseja calcular o salário? ");
                     scanf("%d", &subseletor);
                     if(subseletor == 0){
@@ -91,10 +95,12 @@ int main (){
                 subseletor = 1;
                 fflush(stdin);
                 while(subseletor =! 0){
+                    printf("\n=================== FUNCIONÁRIOS ===================\n");
                     printf("\nCancelar\n");
                     for(i = 1; i < funcionario; i++){
                         fputs(colaborador[i].nome, stdout);
                     }
+                    printf("\n====================================================\n");
                     printf("\nDe quem deseja alterar os dados? ");
                     fgets(stringseletor, sizeof(stringseletor), stdin);
                     if(strcmp(stringseletor, "Cancelar\n") == 0){
@@ -105,7 +111,10 @@ int main (){
                     for(i = 1; i < funcionario; i++){
                         if(strcmp(stringseletor, colaborador[i].nome) == 0){
                             while(subseletor > 0){
-                                printf("[0] Sair\n[1] Nome\n[2] Grau de estudo\n[3] Quantidade de línguas que fala\n[4] Cargo que ocupa\n[5] Índice de produtividade\n");
+                                fflush(stdin);
+                                printf("\n================ MENU DE ALTERAÇÃO =================\n");
+                                printf("\n[0] Sair\n[1] Nome\n[2] Grau de estudo\n[3] Quantidade de línguas que fala\n[4] Cargo que ocupa\n[5] Índice de produtividade\n");
+                                printf("\n====================================================\n");
                                 printf("\nQual dado deseja alterar? ");
                                 fflush(stdin);
                                 scanf("%d", &subseletor);
@@ -176,7 +185,7 @@ int main (){
                     if(colaborador[i].salario >= media){
                         printf("\n");
                         fputs(colaborador[i].nome, stdout);
-                        printf("Tem um salário de: R$ %.2lf, sendo acima da média.\n", colaborador[i].salario);
+                        printf("Tem um salário de R$ %.2lf, sendo acima da média.\n", colaborador[i].salario);
                     }
                     }
             } else {
@@ -189,18 +198,21 @@ int main (){
             if(contador > 0){
                 subseletor = 1;
                 while(subseletor > 0){
+                    printf("\n=================== FUNCIONÁRIOS ===================\n");
                     printf("\n[0] Cancelar\n");
                     for(i = 1; i < funcionario; i++){
                         printf("[%d] ", i);
                         fputs(colaborador[i].nome, stdout);
                     }
+                    printf("\n====================================================\n");
                     printf("\nDe quem deseja ver os dados? ");
                     fflush(stdin);
                     scanf(" %d", &subseletor);
                     if(subseletor == 0){
                         break;
                     } else{
-                        printf("Nome: ");
+                        printf("\n====================== DADOS =======================\n");
+                        printf("\nNome: ");
                         fputs(colaborador[subseletor].nome, stdout);
                         printf("Grau de estudo: %d\n", colaborador[subseletor].estudo);
                         printf("Quantidade de línguas que fala: %d\n", colaborador[subseletor].linguas);
@@ -211,6 +223,7 @@ int main (){
                         } else {
                             printf("Salário nao calculado ainda!\n");
                         }
+                        printf("\n====================================================\n");
                     }
                 }
             } else {
