@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            #themes div{
+                width: 20px;
+                height: 20px;
+                border: 1px solid black;
+                display: inline-block;
+            }
+            .dark{
+                background: black;
+                color: azure;
+            }
+            .normal{
+                background: lightcyan;
+                color: azure;
+            }
+            .light{
+                background: white;
+                color: lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="themes">
+            <div class="dark" onclick="changeTheme(dark)"></div>
+            <div class="normal" onclick="changeTheme(normal)"></div>
+            <div class="light" onclick="changeTheme(light)"></div>
+        </div>
+
+        <input id="color" type="text" placeholder="Digite a cor do tema" onkeypress="applyColor(color)">
+        <button id="colorButton" onclick="applyColor(color)">aplicar</button>
+
+        <h3>Calculadora de desconto</h3>
+        <input id="preco" type="number" placeholder="Digite um número">
+        <button id="aplicar" onclick="calcDesconto()">aplicar desconto</button>
+        <div id="resultado" style="border:1px solid black; display: none"></div>
+        <script>
+            function calcDesconto(){
+                let tagPreco = document.querySelector("#preco").value
+                desconto = tagPreco*0.9
+                let res = document.getElementById("resultado")
+                res.innerHTML = "O valor com desconto é R$: "+desconto.toFixed(2)
+                res.style.display = "block"
+            }
+
+            function changeTheme(themeClass){
+                let body = document.querySelector("body")
+                body.setAttribute("class", themeClass)
+            }
+
+            function applyColor(themeColor){
+                let body = document.querySelector("body")
+                let color = document.querySelector("#color").value
+                body.style.backgroundColor = color
+            }
+        </script>
+    </body>
+</html>

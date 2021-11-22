@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+        <p id="text"></p>
+        <script>
+            var dolar = parseFloat(prompt("Digite o valor em dólar"))
+            var real = dolar*5.60
+            var text = document.getElementById("text")
+            text.innerHTML = "USD "+dolar+" irá custar R$ "+real.toFixed(2)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+        <p id="text"></p>
+        <script>
+            var i, n1, n2, n3, n4, n5, n6, media
+
+            n1 = parseFloat(prompt("Insira o valor do 1° número"))
+            n2 = parseFloat(prompt("Insira o valor do 2° número"))
+            n3 = parseFloat(prompt("Insira o valor do 3° número"))
+            n4 = parseFloat(prompt("Insira o valor do 4° número"))
+            n5 = parseFloat(prompt("Insira o valor do 5° número"))
+            n6 = parseFloat(prompt("Insira o valor do 6° número"))
+
+            media = (n1+n2+n3+n4+n5+n6)/6
+            text = document.getElementById("text")
+            text.innerHTML = "A média dos 6 números é "+media
+        </script>
+    </body>
+</html>

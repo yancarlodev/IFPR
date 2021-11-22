@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+        <p id="text"></p>
+        <script>
+            custoFabrica = parseFloat(prompt("Qual o valor do custo de fábrica?"))
+            percentualDist = custoFabrica*0.28
+            impostos = custoFabrica*0.45
+            custoFabrica += percentualDist+impostos
+            text = document.getElementById("text")
+            text.innerHTML = "O valor final será R$ "+custoFabrica
+        </script>
+    </body>
+</html>

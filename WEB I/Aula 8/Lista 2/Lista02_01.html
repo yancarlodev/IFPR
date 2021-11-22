@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+        <p id="text"></p>
+        <script>
+            var graus = parseFloat(prompt("Insira o valor dos graus Celsius"))
+            var faren = (graus*(9/5)) + 32
+            var text = document.getElementById("text")
+            text.innerHTML = graus+" graus Celsius é igual a "+faren+" graus Fahrenheit"
+        </script>
+    </body>
+</html>
