@@ -2,59 +2,34 @@
 
 <html>
     <head>
-        <style>
-            #themes div{
-                width: 20px;
-                height: 20px;
-                border: 1px solid black;
-                display: inline-block;
-            }
-            .dark{
-                background: black;
-                color: azure;
-            }
-            .normal{
-                background: lightcyan;
-                color: azure;
-            }
-            .light{
-                background: white;
-                color: lightblue;
-            }
-        </style>
     </head>
     <body>
-        <div id="themes">
-            <div class="dark" onclick="changeTheme(dark)"></div>
-            <div class="normal" onclick="changeTheme(normal)"></div>
-            <div class="light" onclick="changeTheme(light)"></div>
+        <div>
+            <button id="retroBtn" onclick="retroImg()"><</button>
+            <button id="nextBtn" onclick="nextImg()">></button>
+            <img id="imgBox" src="https://img.elo7.com.br/product/zoom/2677057/big-poster-filme-guardioes-da-galaxia-lo01-tamanho-90x60-cm-geek.jpg" width="500px" height="600px">
         </div>
-
-        <input id="color" type="text" placeholder="Digite a cor do tema" onkeypress="applyColor(color)">
-        <button id="colorButton" onclick="applyColor(color)">aplicar</button>
-
-        <h3>Calculadora de desconto</h3>
-        <input id="preco" type="number" placeholder="Digite um número">
-        <button id="aplicar" onclick="calcDesconto()">aplicar desconto</button>
-        <div id="resultado" style="border:1px solid black; display: none"></div>
         <script>
-            function calcDesconto(){
-                let tagPreco = document.querySelector("#preco").value
-                desconto = tagPreco*0.9
-                let res = document.getElementById("resultado")
-                res.innerHTML = "O valor com desconto é R$: "+desconto.toFixed(2)
-                res.style.display = "block"
+            var count = 0, photos = [
+                            "https://img.elo7.com.br/product/zoom/2677057/big-poster-filme-guardioes-da-galaxia-lo01-tamanho-90x60-cm-geek.jpg", 
+                            "https://www.estudokids.com.br/wp-content/uploads/2018/11/galaxia-1200x675.jpg",
+                            "https://cdnnbr1.img.sputniknews.com/img/1481/20/14812040_0:131:960:673_600x0_80_0_0_259da5b1301668bea2f696d7461026db.jpg",
+                            "https://static.mundoeducacao.uol.com.br/mundoeducacao/2021/11/galaxia.jpg"
+                                    ]
+            function nextImg(){
+                if(count < photos.length-1){
+                    count++
+                }
+                var img = document.querySelector("#imgBox")
+                img.setAttribute("src", photos[count])
             }
 
-            function changeTheme(themeClass){
-                let body = document.querySelector("body")
-                body.setAttribute("class", themeClass)
-            }
-
-            function applyColor(themeColor){
-                let body = document.querySelector("body")
-                let color = document.querySelector("#color").value
-                body.style.backgroundColor = color
+            function retroImg(){
+                if(count > 0){
+                    count--
+                }
+                var img = document.querySelector("#imgBox")
+                img.setAttribute("src", photos[count])
             }
         </script>
     </body>

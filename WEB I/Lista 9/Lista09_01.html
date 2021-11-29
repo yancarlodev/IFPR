@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            :root{
+                --change-color: white;
+            }
+            .box{
+                width: 300px;
+                height: 300px;
+                border: 1px solid lightgray;
+                display: inline-block;
+                margin: 10px;
+                background-color: var(--change-color);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <button onclick="isOrange()">orange</button>
+        <script>
+            function isOrange (){
+                document.documentElement.style.setProperty('--change-color', 'orange')
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            #container{
+                width: max-content;
+            }
+            .box{
+                border: 1px solid green;
+                width: max-content;
+                padding: 10px;
+                margin-top: 10px;
+            }
+            hr{
+                background-color: red;
+                border: 1px solid red;
+            }
+            #counter{
+                color: red;
+                margin: 0px;
+            }
+            #nextButton{
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <button onclick="retroImg()"><< voltar</button> 
+            <button id="nextButton" onclick="nextImg()">próximo >></button>
+            <div class="box">
+                <p id="counter">0</p>
+                <hr>
+                <img src="./img/car1.jpg" alt="slides" id="slider" width="300px" height="300px">
+            </div>
+        </div>
+        <script>
+            var i = 1
+            function nextImg (){
+                let imgSlider = document.querySelector("#slider")
+                if(i < 5){
+                    i++
+                }
+                imgSlider.setAttribute("src", "./img/car"+i+".jpg")
+                displayCounter = document.getElementById("counter")
+                displayCounter.innerHTML = i-1
+            }
+            function retroImg (){
+                let imgSlider = document.querySelector("#slider")
+                if(i > 1){
+                    i--
+                }
+                imgSlider.setAttribute("src", "./img/car"+i+".jpg")
+                displayCounter = document.getElementById("counter")
+                displayCounter.innerHTML = i-1
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            #formLayout{
+                display: grid;
+                grid-template-columns: max-content max-content;
+                gap: 5px;
+            }
+            #nome, #cpf, #email{
+                justify-self: end;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Preencha o formulário</h2>
+        <form id="formLayout" name="forms">
+            <label id="nome">Nome:</label>
+            <input type="text" required>
+            <label id="cpf" name="cpf">CPF:</label>
+            <input type="text" required>
+            <label id="email">Email:</label>
+            <input type="email" required>
+            <button>enviar</button>
+        </form>
+    </body>
+</html>
